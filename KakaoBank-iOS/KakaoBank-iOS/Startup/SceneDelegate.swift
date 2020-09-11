@@ -2,12 +2,13 @@
 //  SceneDelegate.swift
 //  KakaoBank-iOS
 //
-//  Created by James on 2020/09/08.
+//  Created by James on 2020/09/10.
 //  Copyright © 2020 Youngjin Cheon. All rights reserved.
 //
 
 import UIKit
 
+@available(iOS 13.0, *)
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?

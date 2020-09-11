@@ -8,13 +8,13 @@
 
 import UIKit
 
-class MainTabViewController: UITabBarController {
-
+class MainTabBarViewController: UITabBarController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Open Search tab
         self.selectedIndex = 4
     }
-
 
 }
