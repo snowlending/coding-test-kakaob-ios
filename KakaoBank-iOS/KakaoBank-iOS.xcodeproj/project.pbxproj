@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A02DDA0250CB59A00838727 /* ColorCompatibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A02DD9F250CB59A00838727 /* ColorCompatibility.swift */; };
 		1A404906250AB0350079A0F1 /* SearchHistoryHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A404905250AB0350079A0F1 /* SearchHistoryHelper.swift */; };
 		1A40490E250AC0600079A0F1 /* AppsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A40490D250AC0600079A0F1 /* AppsTableViewController.swift */; };
 		1A404910250AC08D0079A0F1 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A40490F250AC08D0079A0F1 /* App.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A02DD9F250CB59A00838727 /* ColorCompatibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCompatibility.swift; sourceTree = "<group>"; };
 		1A404905250AB0350079A0F1 /* SearchHistoryHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHistoryHelper.swift; sourceTree = "<group>"; };
 		1A40490D250AC0600079A0F1 /* AppsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsTableViewController.swift; sourceTree = "<group>"; };
 		1A40490F250AC08D0079A0F1 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				1A404905250AB0350079A0F1 /* SearchHistoryHelper.swift */,
+				1A02DD9F250CB59A00838727 /* ColorCompatibility.swift */,
 			);
 			path = Heplers;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				1AEBE2C62509E053001840F5 /* SearchedTermsTableViewController.swift in Sources */,
 				1AEBE29C2509DF5D001840F5 /* SceneDelegate.swift in Sources */,
 				1A404906250AB0350079A0F1 /* SearchHistoryHelper.swift in Sources */,
+				1A02DDA0250CB59A00838727 /* ColorCompatibility.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,7 +457,7 @@
 				PRODUCT_NAME = "카뱅코딩";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -474,7 +478,7 @@
 				PRODUCT_NAME = "카뱅코딩";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
