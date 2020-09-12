@@ -7,59 +7,128 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		03EB2445FB55ED9784A79A6573A97ABD /* Pods-KakaoBank-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0096FA2889FD20E7460291CE760EBD8B /* Pods-KakaoBank-iOS-dummy.m */; };
-		5DC1A837E1B33075635DECA5B62C382D /* Pods-KakaoBank-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C856DBE8CB233573619E95B3096755E1 /* Pods-KakaoBank-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BA6C171E367FCF336B42107BC66E19EA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		1C1D31ABECEC95FD5BAF28080EAA6125 /* Pods-KakaoBank-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F30835D610B671ED906AD03DB4233AFA /* Pods-KakaoBank-iOS-dummy.m */; };
+		203D3E1FCA192203AB5D37EC22F35364 /* AlertType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3532EE235E64A32F2CBCD6242152431D /* AlertType.swift */; };
+		26E4E2C02F4D9C50297A83BBB6D5CA88 /* Pods-KakaoBank-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 946AB02462FFDD2CE9C36E2CA13CDA7F /* Pods-KakaoBank-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		475E33060A4AD09EC6A249E299B37A47 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		4E944DBE3299831E34A68E3E57885D03 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		4F7EE329552D080FCD3319C9665001B8 /* ActionHandlerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6B0C778E40FF24BE81ACBE6882F1A8 /* ActionHandlerBuilder.swift */; };
+		983D578419A2C84D5E349D687E463AC5 /* Alertift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC6CF170D16ECBCF1B457F00956CCA7 /* Alertift.swift */; };
+		A68D58AFB4763F57B7E6B53470B9B06D /* ActionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83CCBF40393300CF3C9852D47630941 /* ActionSheet.swift */; };
+		B73DECE1F48A51B3CD342262F7551718 /* Alertift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E285482843BA907F1F1DF8C7AB429F9 /* Alertift-dummy.m */; };
+		C5990BE86626FD87C2B66BC568218B9E /* Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC6828B541FCCCE3656FB64D2B505BC /* Debug.swift */; };
+		C6CE80753CF1B2337BFD2D17CE80BD70 /* Alertift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5335E26777DD5CBD315E896CF52F6663 /* Alertift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DB48353535FA2BC150A5E923D89DD39A /* InnerAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA224A1EE0C9B0CC0B6476EEFD1DFC4 /* InnerAlertController.swift */; };
+		E3910B092E5DC8885F0B7889158412BA /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78F291F585C902A9EB189C8A7BD6F08 /* Action.swift */; };
+		FAC391C7F119F7B626572AD2561022A5 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1785FE1E4915B260FE81CE9AFAF12E /* Alert.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		0BFCDBE9425201CB754C9377D921640A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 73F83E2CAF52E2DF139DF174A93E872C;
+			remoteInfo = Alertift;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		0096FA2889FD20E7460291CE760EBD8B /* Pods-KakaoBank-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-KakaoBank-iOS-dummy.m"; sourceTree = "<group>"; };
-		04BE6DF79D638EBC4928D6BE645F5D85 /* Pods-KakaoBank-iOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KakaoBank-iOS-Info.plist"; sourceTree = "<group>"; };
-		0F1B2374BA659A1F1630C6A674DDC82D /* Pods-KakaoBank-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KakaoBank-iOS.release.xcconfig"; sourceTree = "<group>"; };
-		313839498E572C9A447CE6AEA9BC67B8 /* Pods-KakaoBank-iOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KakaoBank-iOS-acknowledgements.plist"; sourceTree = "<group>"; };
+		00E6B9EB7F59226FED05F79264A13816 /* Pods-KakaoBank-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KakaoBank-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		0FC6828B541FCCCE3656FB64D2B505BC /* Debug.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Debug.swift; path = Sources/Debug.swift; sourceTree = "<group>"; };
+		2C1785FE1E4915B260FE81CE9AFAF12E /* Alert.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alert.swift; path = Sources/Alert.swift; sourceTree = "<group>"; };
+		2D91E85BD4BB2874F138087761874FE2 /* Pods-KakaoBank-iOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KakaoBank-iOS-acknowledgements.plist"; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		34552FFD6F7B48EBF7449B3065C4C83F /* Pods_KakaoBank_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_KakaoBank_iOS.framework; path = "Pods-KakaoBank-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		60C51B014CDE42ACF287522F2E141234 /* Pods-KakaoBank-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KakaoBank-iOS.debug.xcconfig"; sourceTree = "<group>"; };
-		697BBEE44F700E17C777DD494711DA96 /* Pods-KakaoBank-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-KakaoBank-iOS.modulemap"; sourceTree = "<group>"; };
+		3532EE235E64A32F2CBCD6242152431D /* AlertType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AlertType.swift; path = Sources/AlertType.swift; sourceTree = "<group>"; };
+		396B5F05169A15514F906EC7137FED71 /* Alertift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Alertift.modulemap; sourceTree = "<group>"; };
+		3AA224A1EE0C9B0CC0B6476EEFD1DFC4 /* InnerAlertController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InnerAlertController.swift; path = Sources/InnerAlertController.swift; sourceTree = "<group>"; };
+		45DD8F12402068D6A37193F96764B509 /* Alertift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alertift.xcconfig; sourceTree = "<group>"; };
+		4E285482843BA907F1F1DF8C7AB429F9 /* Alertift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alertift-dummy.m"; sourceTree = "<group>"; };
+		51B17D94C329E6D4B5E41D9C9C48C4B5 /* Pods-KakaoBank-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KakaoBank-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		5335E26777DD5CBD315E896CF52F6663 /* Alertift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alertift-umbrella.h"; sourceTree = "<group>"; };
+		6DC6CF170D16ECBCF1B457F00956CCA7 /* Alertift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alertift.swift; path = Sources/Alertift.swift; sourceTree = "<group>"; };
+		946AB02462FFDD2CE9C36E2CA13CDA7F /* Pods-KakaoBank-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-KakaoBank-iOS-umbrella.h"; sourceTree = "<group>"; };
+		9B444D8794A98ABA42C9E0DC6CAE3C72 /* Pods-KakaoBank-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-KakaoBank-iOS.modulemap"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		C856DBE8CB233573619E95B3096755E1 /* Pods-KakaoBank-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-KakaoBank-iOS-umbrella.h"; sourceTree = "<group>"; };
-		CB915CBCEEB881757A8FDB17CCF001CB /* Pods-KakaoBank-iOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-KakaoBank-iOS-acknowledgements.markdown"; sourceTree = "<group>"; };
+		B50EECD4D415E039A5284E3BFD0B43FE /* Pods-KakaoBank-iOS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KakaoBank-iOS-frameworks.sh"; sourceTree = "<group>"; };
+		BD6B0C778E40FF24BE81ACBE6882F1A8 /* ActionHandlerBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ActionHandlerBuilder.swift; path = Sources/ActionHandlerBuilder.swift; sourceTree = "<group>"; };
+		C399C1AAD0785519E3A39042286518D7 /* Alertift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alertift-prefix.pch"; sourceTree = "<group>"; };
+		C76AE6E20A96633D44BA3CB671E2D2DC /* Pods-KakaoBank-iOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-KakaoBank-iOS-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D08497E941B3DBBB895C7F532AD21F41 /* Pods-KakaoBank-iOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KakaoBank-iOS-Info.plist"; sourceTree = "<group>"; };
+		D0FA80D6159145182DA57745B7B82084 /* Alertift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alertift.framework; path = Alertift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D78F291F585C902A9EB189C8A7BD6F08 /* Action.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Action.swift; path = Sources/Action.swift; sourceTree = "<group>"; };
+		E83CCBF40393300CF3C9852D47630941 /* ActionSheet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ActionSheet.swift; path = Sources/ActionSheet.swift; sourceTree = "<group>"; };
+		F30835D610B671ED906AD03DB4233AFA /* Pods-KakaoBank-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-KakaoBank-iOS-dummy.m"; sourceTree = "<group>"; };
+		F86E8A2CF20154D10823D089F80F5236 /* Alertift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Alertift-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		F57FE6AE87029C0C6B95782852947972 /* Frameworks */ = {
+		42D63DA6524B3E5338506ADE8F743F91 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA6C171E367FCF336B42107BC66E19EA /* Foundation.framework in Frameworks */,
+				4E944DBE3299831E34A68E3E57885D03 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD83A6D5961E6D20127101BAAA740C84 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				475E33060A4AD09EC6A249E299B37A47 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		86E768FCEDC851BCBE9D14433FACBC11 /* Products */ = {
+		01B7A53C628CC9520523DDC6D2510DBD /* Alertift */ = {
 			isa = PBXGroup;
 			children = (
+				D78F291F585C902A9EB189C8A7BD6F08 /* Action.swift */,
+				BD6B0C778E40FF24BE81ACBE6882F1A8 /* ActionHandlerBuilder.swift */,
+				E83CCBF40393300CF3C9852D47630941 /* ActionSheet.swift */,
+				2C1785FE1E4915B260FE81CE9AFAF12E /* Alert.swift */,
+				6DC6CF170D16ECBCF1B457F00956CCA7 /* Alertift.swift */,
+				3532EE235E64A32F2CBCD6242152431D /* AlertType.swift */,
+				0FC6828B541FCCCE3656FB64D2B505BC /* Debug.swift */,
+				3AA224A1EE0C9B0CC0B6476EEFD1DFC4 /* InnerAlertController.swift */,
+				A8BE035AD97DABD236DB251305AE23D9 /* Support Files */,
+			);
+			name = Alertift;
+			path = Alertift;
+			sourceTree = "<group>";
+		};
+		3462F0F2622E7F449970491BA8769728 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D0FA80D6159145182DA57745B7B82084 /* Alertift.framework */,
 				34552FFD6F7B48EBF7449B3065C4C83F /* Pods_KakaoBank_iOS.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		891E8EA609B20F19AF081C280CC6EA84 /* Pods-KakaoBank-iOS */ = {
+		4EF4C9F9A5AE95634E14D092973FFFF6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				697BBEE44F700E17C777DD494711DA96 /* Pods-KakaoBank-iOS.modulemap */,
-				CB915CBCEEB881757A8FDB17CCF001CB /* Pods-KakaoBank-iOS-acknowledgements.markdown */,
-				313839498E572C9A447CE6AEA9BC67B8 /* Pods-KakaoBank-iOS-acknowledgements.plist */,
-				0096FA2889FD20E7460291CE760EBD8B /* Pods-KakaoBank-iOS-dummy.m */,
-				04BE6DF79D638EBC4928D6BE645F5D85 /* Pods-KakaoBank-iOS-Info.plist */,
-				C856DBE8CB233573619E95B3096755E1 /* Pods-KakaoBank-iOS-umbrella.h */,
-				60C51B014CDE42ACF287522F2E141234 /* Pods-KakaoBank-iOS.debug.xcconfig */,
-				0F1B2374BA659A1F1630C6A674DDC82D /* Pods-KakaoBank-iOS.release.xcconfig */,
+				01B7A53C628CC9520523DDC6D2510DBD /* Alertift */,
 			);
-			name = "Pods-KakaoBank-iOS";
-			path = "Target Support Files/Pods-KakaoBank-iOS";
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A8BE035AD97DABD236DB251305AE23D9 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				396B5F05169A15514F906EC7137FED71 /* Alertift.modulemap */,
+				45DD8F12402068D6A37193F96764B509 /* Alertift.xcconfig */,
+				4E285482843BA907F1F1DF8C7AB429F9 /* Alertift-dummy.m */,
+				F86E8A2CF20154D10823D089F80F5236 /* Alertift-Info.plist */,
+				C399C1AAD0785519E3A39042286518D7 /* Alertift-prefix.pch */,
+				5335E26777DD5CBD315E896CF52F6663 /* Alertift-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Alertift";
 			sourceTree = "<group>";
 		};
 		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
@@ -75,8 +144,9 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				86E768FCEDC851BCBE9D14433FACBC11 /* Products */,
-				FB7F3ADC03F455075C2D3ABFD2DAF70C /* Targets Support Files */,
+				4EF4C9F9A5AE95634E14D092973FFFF6 /* Pods */,
+				3462F0F2622E7F449970491BA8769728 /* Products */,
+				FD0EAACEC6FC8B6255CD6D1F0C7B0907 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -88,22 +158,47 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		FB7F3ADC03F455075C2D3ABFD2DAF70C /* Targets Support Files */ = {
+		FD0EAACEC6FC8B6255CD6D1F0C7B0907 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				891E8EA609B20F19AF081C280CC6EA84 /* Pods-KakaoBank-iOS */,
+				FD6E2B9E9480183F4FA54F7777ADD11D /* Pods-KakaoBank-iOS */,
 			);
 			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		FD6E2B9E9480183F4FA54F7777ADD11D /* Pods-KakaoBank-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				9B444D8794A98ABA42C9E0DC6CAE3C72 /* Pods-KakaoBank-iOS.modulemap */,
+				C76AE6E20A96633D44BA3CB671E2D2DC /* Pods-KakaoBank-iOS-acknowledgements.markdown */,
+				2D91E85BD4BB2874F138087761874FE2 /* Pods-KakaoBank-iOS-acknowledgements.plist */,
+				F30835D610B671ED906AD03DB4233AFA /* Pods-KakaoBank-iOS-dummy.m */,
+				B50EECD4D415E039A5284E3BFD0B43FE /* Pods-KakaoBank-iOS-frameworks.sh */,
+				D08497E941B3DBBB895C7F532AD21F41 /* Pods-KakaoBank-iOS-Info.plist */,
+				946AB02462FFDD2CE9C36E2CA13CDA7F /* Pods-KakaoBank-iOS-umbrella.h */,
+				51B17D94C329E6D4B5E41D9C9C48C4B5 /* Pods-KakaoBank-iOS.debug.xcconfig */,
+				00E6B9EB7F59226FED05F79264A13816 /* Pods-KakaoBank-iOS.release.xcconfig */,
+			);
+			name = "Pods-KakaoBank-iOS";
+			path = "Target Support Files/Pods-KakaoBank-iOS";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		6719F4BE18EA37FD33E1917FFDA1BCCA /* Headers */ = {
+		0A97BEDB1FD053D74B9CB64B5CCED538 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5DC1A837E1B33075635DECA5B62C382D /* Pods-KakaoBank-iOS-umbrella.h in Headers */,
+				C6CE80753CF1B2337BFD2D17CE80BD70 /* Alertift-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		393E1E66786DEEF805EA3FD768CC0205 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26E4E2C02F4D9C50297A83BBB6D5CA88 /* Pods-KakaoBank-iOS-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,20 +207,39 @@
 /* Begin PBXNativeTarget section */
 		443AA93CFB8F85E71E4C70A68F6A1BE0 /* Pods-KakaoBank-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 83E3AA46BBC0A78CA35FC37FAF276183 /* Build configuration list for PBXNativeTarget "Pods-KakaoBank-iOS" */;
+			buildConfigurationList = CA8A2377DFA26239767B924A672209D2 /* Build configuration list for PBXNativeTarget "Pods-KakaoBank-iOS" */;
 			buildPhases = (
-				6719F4BE18EA37FD33E1917FFDA1BCCA /* Headers */,
-				1C11C7C88FD055608955689AA41635CC /* Sources */,
-				F57FE6AE87029C0C6B95782852947972 /* Frameworks */,
-				EFA90E4122F55DABC886161CDA6C5225 /* Resources */,
+				393E1E66786DEEF805EA3FD768CC0205 /* Headers */,
+				5E9B00A47240D0A65D3315E95C9ADAAD /* Sources */,
+				42D63DA6524B3E5338506ADE8F743F91 /* Frameworks */,
+				8FDEFA88809E0EF54537E1EE42E7223C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E1A12BDE9128182476CF78304771B7AF /* PBXTargetDependency */,
+			);
+			name = "Pods-KakaoBank-iOS";
+			productName = "Pods-KakaoBank-iOS";
+			productReference = 34552FFD6F7B48EBF7449B3065C4C83F /* Pods_KakaoBank_iOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		73F83E2CAF52E2DF139DF174A93E872C /* Alertift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EEE191BDE89BF1EB6D90FEDA73508A7E /* Build configuration list for PBXNativeTarget "Alertift" */;
+			buildPhases = (
+				0A97BEDB1FD053D74B9CB64B5CCED538 /* Headers */,
+				4D51AC13F4C520F3E6BF1005C8367C66 /* Sources */,
+				CD83A6D5961E6D20127101BAAA740C84 /* Frameworks */,
+				79FEE3EE3973AC01BA6BEBC1A86DB691 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Pods-KakaoBank-iOS";
-			productName = "Pods-KakaoBank-iOS";
-			productReference = 34552FFD6F7B48EBF7449B3065C4C83F /* Pods_KakaoBank_iOS.framework */;
+			name = Alertift;
+			productName = Alertift;
+			productReference = D0FA80D6159145182DA57745B7B82084 /* Alertift.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -146,17 +260,25 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 86E768FCEDC851BCBE9D14433FACBC11 /* Products */;
+			productRefGroup = 3462F0F2622E7F449970491BA8769728 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				73F83E2CAF52E2DF139DF174A93E872C /* Alertift */,
 				443AA93CFB8F85E71E4C70A68F6A1BE0 /* Pods-KakaoBank-iOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		EFA90E4122F55DABC886161CDA6C5225 /* Resources */ = {
+		79FEE3EE3973AC01BA6BEBC1A86DB691 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FDEFA88809E0EF54537E1EE42E7223C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -166,17 +288,78 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1C11C7C88FD055608955689AA41635CC /* Sources */ = {
+		4D51AC13F4C520F3E6BF1005C8367C66 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03EB2445FB55ED9784A79A6573A97ABD /* Pods-KakaoBank-iOS-dummy.m in Sources */,
+				E3910B092E5DC8885F0B7889158412BA /* Action.swift in Sources */,
+				4F7EE329552D080FCD3319C9665001B8 /* ActionHandlerBuilder.swift in Sources */,
+				A68D58AFB4763F57B7E6B53470B9B06D /* ActionSheet.swift in Sources */,
+				FAC391C7F119F7B626572AD2561022A5 /* Alert.swift in Sources */,
+				B73DECE1F48A51B3CD342262F7551718 /* Alertift-dummy.m in Sources */,
+				983D578419A2C84D5E349D687E463AC5 /* Alertift.swift in Sources */,
+				203D3E1FCA192203AB5D37EC22F35364 /* AlertType.swift in Sources */,
+				C5990BE86626FD87C2B66BC568218B9E /* Debug.swift in Sources */,
+				DB48353535FA2BC150A5E923D89DD39A /* InnerAlertController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5E9B00A47240D0A65D3315E95C9ADAAD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C1D31ABECEC95FD5BAF28080EAA6125 /* Pods-KakaoBank-iOS-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		E1A12BDE9128182476CF78304771B7AF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Alertift;
+			target = 73F83E2CAF52E2DF139DF174A93E872C /* Alertift */;
+			targetProxy = 0BFCDBE9425201CB754C9377D921640A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		02896829AE9AE53266AA9438376978BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45DD8F12402068D6A37193F96764B509 /* Alertift.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Alertift/Alertift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Alertift/Alertift-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Alertift/Alertift.modulemap";
+				PRODUCT_MODULE_NAME = Alertift;
+				PRODUCT_NAME = Alertift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		3C73BDAC02BF6A4D61D6D97D384D8842 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -234,6 +417,83 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		861CEF7C52DD145281D30DA102B4B63F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51B17D94C329E6D4B5E41D9C9C48C4B5 /* Pods-KakaoBank-iOS.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-KakaoBank-iOS/Pods-KakaoBank-iOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-KakaoBank-iOS/Pods-KakaoBank-iOS.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A0996E3AB6D14F84F40646571584FF2D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00E6B9EB7F59226FED05F79264A13816 /* Pods-KakaoBank-iOS.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-KakaoBank-iOS/Pods-KakaoBank-iOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-KakaoBank-iOS/Pods-KakaoBank-iOS.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -301,12 +561,10 @@
 			};
 			name = Debug;
 		};
-		B2AF5AA97492FD849056352CCEA80FAB /* Debug */ = {
+		D72FDF5BF71C90B7281B574E5B6D0C32 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 60C51B014CDE42ACF287522F2E141234 /* Pods-KakaoBank-iOS.debug.xcconfig */;
+			baseConfigurationReference = 45DD8F12402068D6A37193F96764B509 /* Alertift.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -316,67 +574,27 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-KakaoBank-iOS/Pods-KakaoBank-iOS-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Alertift/Alertift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Alertift/Alertift-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-KakaoBank-iOS/Pods-KakaoBank-iOS.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				MODULEMAP_FILE = "Target Support Files/Alertift/Alertift.modulemap";
+				PRODUCT_MODULE_NAME = Alertift;
+				PRODUCT_NAME = Alertift;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
-		};
-		D2F982559796B8C2BEC2626BB1EF8193 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0F1B2374BA659A1F1630C6A674DDC82D /* Pods-KakaoBank-iOS.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-KakaoBank-iOS/Pods-KakaoBank-iOS-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-KakaoBank-iOS/Pods-KakaoBank-iOS.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
@@ -390,11 +608,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83E3AA46BBC0A78CA35FC37FAF276183 /* Build configuration list for PBXNativeTarget "Pods-KakaoBank-iOS" */ = {
+		CA8A2377DFA26239767B924A672209D2 /* Build configuration list for PBXNativeTarget "Pods-KakaoBank-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B2AF5AA97492FD849056352CCEA80FAB /* Debug */,
-				D2F982559796B8C2BEC2626BB1EF8193 /* Release */,
+				861CEF7C52DD145281D30DA102B4B63F /* Debug */,
+				A0996E3AB6D14F84F40646571584FF2D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EEE191BDE89BF1EB6D90FEDA73508A7E /* Build configuration list for PBXNativeTarget "Alertift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D72FDF5BF71C90B7281B574E5B6D0C32 /* Debug */,
+				02896829AE9AE53266AA9438376978BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

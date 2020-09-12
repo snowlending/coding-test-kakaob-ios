@@ -6,5 +6,6 @@ target 'KakaoBank-iOS' do
   use_frameworks!
 
   # Pods for KakaoBank-iOS
+  pod 'Alertift', '~> 4.1'
 
 end
