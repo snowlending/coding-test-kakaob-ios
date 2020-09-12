@@ -30,6 +30,61 @@ class SearchViewController: UITableViewController, UISearchControllerDelegate {
         initSearchController()
         
         initSampleData()
+        
+        test()
+    }
+    
+    func test() {
+        let term = "카카오뱅크"
+        var urlComponents = URLComponents()
+        urlComponents.scheme = "https"
+        urlComponents.host = "itunes.apple.com"
+        urlComponents.path = "/search"
+        urlComponents.queryItems = [
+            URLQueryItem(name: "term", value: term),
+            URLQueryItem(name: "country", value: "KR"),
+            URLQueryItem(name: "entity", value: "software"),
+            URLQueryItem(name: "lang", value: "ko_KR"),
+            URLQueryItem(name: "explicit", value: "NO"),
+            URLQueryItem(name: "limit", value: "200"),
+        ]
+        
+        let url = urlComponents.url!
+        var session = URLSession.shared
+        let configuration = URLSessionConfiguration.default
+        // See additional explanation
+        // https://github.com/Alamofire/Alamofire/issues/1266#issuecomment-221471947
+        configuration.timeoutIntervalForRequest = 5
+        configuration.timeoutIntervalForResource = 30
+        session = URLSession(configuration: configuration)
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue("application/json", forHTTPHeaderField: "Accept")
+
+        let task = session.dataTask(with: request as URLRequest, completionHandler: { data, response, error in
+
+            if error != nil || data == nil {
+                print("Client error!")
+                return
+            }
+
+            guard let response = response as? HTTPURLResponse, (200...299).contains(response.statusCode) else {
+                print("Server error!")
+                return
+            }
+
+            do {
+                let json = try JSONSerialization.jsonObject(with: data!, options: [])
+                print("The Response is : ",json)
+            } catch {
+                print("JSON error: \(error.localizedDescription)")
+            }
+
+        })
+        
+        task.resume()
     }
     
     // Initialize search bar UI

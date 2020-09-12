@@ -10,14 +10,14 @@ import UIKit
 
 class SearchedTermTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var imgvSearch: UIImageView!
+    @IBOutlet weak var ivSearch: UIImageView!
     @IBOutlet weak var label: UILabel!
     
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        imgvSearch.image = imgvSearch.image?.withRenderingMode(.alwaysTemplate)
-        imgvSearch.tintColor = ColorCompatibility.systemGray2
+        ivSearch.image = ivSearch.image?.withRenderingMode(.alwaysTemplate)
+        ivSearch.tintColor = ColorCompatibility.systemGray2
     }
     
     func set(term: String, searchedTerm: String) {
