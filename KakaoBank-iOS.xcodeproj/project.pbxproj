@@ -151,7 +151,7 @@
 				1A404904250AB0250079A0F1 /* Heplers */,
 				1AEBE2C72509E05F001840F5 /* Extensions */,
 				1AEBE2CA2509E426001840F5 /* Models */,
-				1AEBE2B12509E052001840F5 /* Tabs */,
+				1AEBE2B12509E052001840F5 /* ViewControllers */,
 				1A40490A250ABB0D0079A0F1 /* Startup */,
 				1A40490B250ABB4A0079A0F1 /* Resources */,
 				1A40490C250ABB5F0079A0F1 /* Supporting Files */,
@@ -159,7 +159,7 @@
 			path = "KakaoBank-iOS";
 			sourceTree = "<group>";
 		};
-		1AEBE2B12509E052001840F5 /* Tabs */ = {
+		1AEBE2B12509E052001840F5 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				1AEBE2B62509E052001840F5 /* Today */,
@@ -169,7 +169,7 @@
 				1AEBE2BA2509E052001840F5 /* Search */,
 				1AEBE2AF2509E023001840F5 /* MainTabBarViewController.swift */,
 			);
-			path = Tabs;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		1AEBE2B22509E052001840F5 /* App */ = {
