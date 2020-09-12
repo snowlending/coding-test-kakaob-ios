@@ -29,6 +29,7 @@
 		1AEBE2C62509E053001840F5 /* SearchedTermsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEBE2BE2509E052001840F5 /* SearchedTermsTableViewController.swift */; };
 		1AEBE2C92509E05F001840F5 /* UIViewController+Child.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEBE2C82509E05F001840F5 /* UIViewController+Child.swift */; };
 		1AEBE2CC2509E426001840F5 /* SearchType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEBE2CB2509E426001840F5 /* SearchType.swift */; };
+		634E165260DA91C1AB482155 /* Pods_KakaoBank_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24539A6640E928E392D63EDC /* Pods_KakaoBank_iOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,9 @@
 		1AEBE2BE2509E052001840F5 /* SearchedTermsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchedTermsTableViewController.swift; sourceTree = "<group>"; };
 		1AEBE2C82509E05F001840F5 /* UIViewController+Child.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Child.swift"; sourceTree = "<group>"; };
 		1AEBE2CB2509E426001840F5 /* SearchType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchType.swift; sourceTree = "<group>"; };
+		24539A6640E928E392D63EDC /* Pods_KakaoBank_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KakaoBank_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E1C1F73750D4A0A21B231C1 /* Pods-KakaoBank-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KakaoBank-iOS.debug.xcconfig"; path = "Target Support Files/Pods-KakaoBank-iOS/Pods-KakaoBank-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		A5319E0BDD721BD62A9FA585 /* Pods-KakaoBank-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KakaoBank-iOS.release.xcconfig"; path = "Target Support Files/Pods-KakaoBank-iOS/Pods-KakaoBank-iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,12 +67,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				634E165260DA91C1AB482155 /* Pods_KakaoBank_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0798F83121E3EEB7C6C7DE69 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				24539A6640E928E392D63EDC /* Pods_KakaoBank_iOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1158F91E73F56A3A641C0D63 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9E1C1F73750D4A0A21B231C1 /* Pods-KakaoBank-iOS.debug.xcconfig */,
+				A5319E0BDD721BD62A9FA585 /* Pods-KakaoBank-iOS.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		1A404904250AB0250079A0F1 /* Heplers */ = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +132,8 @@
 			children = (
 				1AEBE2982509DF5D001840F5 /* KakaoBank-iOS */,
 				1AEBE2972509DF5D001840F5 /* Products */,
+				1158F91E73F56A3A641C0D63 /* Pods */,
+				0798F83121E3EEB7C6C7DE69 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -218,6 +242,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1AEBE2AC2509DF5F001840F5 /* Build configuration list for PBXNativeTarget "KakaoBank-iOS" */;
 			buildPhases = (
+				26244A8C4857411709DBF259 /* [CP] Check Pods Manifest.lock */,
 				1AEBE2922509DF5D001840F5 /* Sources */,
 				1AEBE2932509DF5D001840F5 /* Frameworks */,
 				1AEBE2942509DF5D001840F5 /* Resources */,
@@ -276,6 +301,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		26244A8C4857411709DBF259 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KakaoBank-iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1AEBE2922509DF5D001840F5 /* Sources */ = {
@@ -442,6 +492,7 @@
 		};
 		1AEBE2AD2509DF5F001840F5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E1C1F73750D4A0A21B231C1 /* Pods-KakaoBank-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
@@ -463,6 +514,7 @@
 		};
 		1AEBE2AE2509DF5F001840F5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5319E0BDD721BD62A9FA585 /* Pods-KakaoBank-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
