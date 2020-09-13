@@ -16,7 +16,7 @@ class SearchHistoryHelper {
     // Singleton
     static let shared: SearchHistoryHelper = {
         let instance = SearchHistoryHelper()
-        instance.history = [String]()
+        instance.history = instance.all()
         return instance
     }()
     
@@ -39,6 +39,7 @@ class SearchHistoryHelper {
             data.remove(at: hasTerm)
         }
         data.insert(term, at: 0)
+        print(data)
         defaults.set(data, forKey: KEY)
         history = data
     }
