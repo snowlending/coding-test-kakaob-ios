@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alertift
 
 class SearchViewController: UITableViewController, UISearchControllerDelegate {
     
@@ -19,11 +20,9 @@ class SearchViewController: UITableViewController, UISearchControllerDelegate {
         super.viewDidLoad()
 
         // Remove the last border of the last cell
-        self.tableView.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: 1))
-
+        tableView.removeBottomSeparatorLine()
         // Shadow hidden
         navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
-        
         // Translucent navigation bar
         extendedLayoutIncludesOpaqueBars = true
 
@@ -34,57 +33,75 @@ class SearchViewController: UITableViewController, UISearchControllerDelegate {
         test()
     }
     
-    func test() {
-        let term = "카카오뱅크"
-        var urlComponents = URLComponents()
-        urlComponents.scheme = "https"
-        urlComponents.host = "itunes.apple.com"
-        urlComponents.path = "/search"
-        urlComponents.queryItems = [
-            URLQueryItem(name: "term", value: term),
-            URLQueryItem(name: "country", value: "KR"),
-            URLQueryItem(name: "entity", value: "software"),
-            URLQueryItem(name: "lang", value: "ko_KR"),
-            URLQueryItem(name: "explicit", value: "NO"),
-            URLQueryItem(name: "limit", value: "200"),
-        ]
+    func test() {        
         
-        let url = urlComponents.url!
-        var session = URLSession.shared
-        let configuration = URLSessionConfiguration.default
-        // See additional explanation
-        // https://github.com/Alamofire/Alamofire/issues/1266#issuecomment-221471947
-        configuration.timeoutIntervalForRequest = 5
-        configuration.timeoutIntervalForResource = 30
-        session = URLSession(configuration: configuration)
-        
-        var request = URLRequest(url: url)
-        request.httpMethod = "GET"
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.addValue("application/json", forHTTPHeaderField: "Accept")
-
-        let task = session.dataTask(with: request as URLRequest, completionHandler: { data, response, error in
-
-            if error != nil || data == nil {
-                print("Client error!")
-                return
-            }
-
-            guard let response = response as? HTTPURLResponse, (200...299).contains(response.statusCode) else {
-                print("Server error!")
-                return
-            }
-
-            do {
-                let json = try JSONSerialization.jsonObject(with: data!, options: [])
-                print("The Response is : ",json)
-            } catch {
-                print("JSON error: \(error.localizedDescription)")
-            }
-
-        })
-        
-        task.resume()
+//        let term = "카카오뱅크"
+//        print(ItunesAPI.shared.getURL(with: "search"))
+//        let term = "카카오뱅크"
+//        var urlComponents = URLComponents()
+//        urlComponents.scheme = "https"
+//        urlComponents.host = "itunes.apple.com"
+//        urlComponents.path = "/search"
+//        urlComponents.queryItems = [
+//            URLQueryItem(name: "term", value: term),
+//            URLQueryItem(name: "country", value: "KR"),
+//            URLQueryItem(name: "entity", value: "software"),
+//            URLQueryItem(name: "lang", value: "ko_KR"),
+//            URLQueryItem(name: "explicit", value: "NO"),
+//            URLQueryItem(name: "limit", value: "200"),
+//        ]
+//
+//        let url = urlComponents.url!
+//        var session = URLSession.shared
+//        let configuration = URLSessionConfiguration.default
+//        // See additional explanation
+//        // https://github.com/Alamofire/Alamofire/issues/1266#issuecomment-221471947
+//        configuration.timeoutIntervalForRequest = 7
+//        configuration.timeoutIntervalForResource = 30
+//        session = URLSession(configuration: configuration)
+//
+//        var request = URLRequest(url: url)
+//        request.httpMethod = "GET"
+//        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+//        request.addValue("application/json", forHTTPHeaderField: "Accept")
+//
+//        let task = session.dataTask(with: request as URLRequest, completionHandler: { data, response, error in
+//
+//            if error != nil || data == nil {
+//                print("클라이언트 에러가 있습니다.")
+//                DispatchQueue.main.async {
+//                    Alertift.alert(title: "네트워크 에러", message: "클라이언트 에러가 있습니다.")
+//                        .action(.default("확인"))
+//                        .show(on: self)
+//                }
+//                return
+//            }
+//
+//            guard let resp = response as? HTTPURLResponse, (200...299).contains(resp.statusCode) else {
+//                print("서버 에러가 있습니다.\n코드: \((response as? HTTPURLResponse)?.statusCode ?? 0)")
+//                DispatchQueue.main.async {
+//                    Alertift.alert(title: "네트워크 에러", message: "서버 에러가 있습니다.\n코드: \((response as? HTTPURLResponse)?.statusCode ?? 0)")
+//                        .action(.default("확인"))
+//                        .show()
+//                }
+//                return
+//            }
+//
+//            do {
+//                let json = try JSONSerialization.jsonObject(with: data!, options: [])
+//                print(json)
+//            } catch {
+//                print("JSON error: \(error.localizedDescription)")
+//                DispatchQueue.main.async {
+//                    Alertift.alert(title: "데이터 에러", message: "데이터에 에러가 있습니다.\n메세지: \(error.localizedDescription)")
+//                        .action(.default("확인"))
+//                        .show(on: self)
+//                }
+//            }
+//
+//        })
+//
+//        task.resume()
     }
     
     // Initialize search bar UI
@@ -104,7 +121,7 @@ class SearchViewController: UITableViewController, UISearchControllerDelegate {
         let sampleData = ["카카오", "카카오뱅크", "녹음기", "엠넷", "pitu", "의지의 히어로", "구글맵", "진에어", "grab"].reversed()
         sampleData.forEach {SearchHistoryHelper.shared.add(term: $0)}
         searchHistory = SearchHistoryHelper.shared.all()
-        tableView.reloadData()
+        tableView.reloadOnMainThread()
     }
     
     // Search run
@@ -122,7 +139,7 @@ class SearchViewController: UITableViewController, UISearchControllerDelegate {
         
         // Recent search term update
         searchHistory = SearchHistoryHelper.shared.all()
-        tableView.reloadData()
+        tableView.reloadOnMainThread()
     }
     
     

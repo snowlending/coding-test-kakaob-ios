@@ -15,9 +15,7 @@ class SearchedTermsTableViewController: UITableViewController {
         didSet {
             // Search history filter
             terms = SearchHistoryHelper.shared.all().filter{$0.lowercased().hasPrefix(searchedTerm.lowercased())}
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
+            tableView.reloadOnMainThread()
         }
     }
     

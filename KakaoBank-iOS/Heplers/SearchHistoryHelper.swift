@@ -9,6 +9,7 @@
 import Foundation
 
 class SearchHistoryHelper {
+    
     private let KEY = "SavedStringArray"
     private var history: [String]!
     
