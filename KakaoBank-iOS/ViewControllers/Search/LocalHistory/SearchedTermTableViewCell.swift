@@ -15,11 +15,10 @@ class SearchedTermTableViewCell: UITableViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        
-        ivSearch.image = ivSearch.image?.withRenderingMode(.alwaysTemplate)
-        ivSearch.tintColor = ColorCompatibility.systemGray2
+        ivSearch.tintColor(with: ColorCompatibility.systemGray2)
     }
     
+    // Typing search terms
     func set(term: String, searchedTerm: String) {
         let attributes: [NSAttributedString.Key: Any] = [.font: UIFont.systemFont(ofSize: 20), .foregroundColor: ColorCompatibility.systemGray2]
         let attributedString = NSAttributedString(string: term.lowercased(), attributes: attributes)
