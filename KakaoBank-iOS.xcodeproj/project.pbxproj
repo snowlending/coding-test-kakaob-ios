@@ -57,7 +57,7 @@
 		1A40490F250AC08D0079A0F1 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		1A404911250AC0E80079A0F1 /* AppTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTableViewCell.swift; sourceTree = "<group>"; };
 		1A404913250AC3220079A0F1 /* Designable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Designable.swift; sourceTree = "<group>"; };
-		1AEBE2962509DF5D001840F5 /* KaBank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KaBank.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AEBE2962509DF5D001840F5 /* 카뱅코딩.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "카뱅코딩.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AEBE2992509DF5D001840F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1AEBE29B2509DF5D001840F5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		1AEBE2A22509DF5D001840F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -194,7 +194,7 @@
 		1AEBE2972509DF5D001840F5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1AEBE2962509DF5D001840F5 /* KaBank.app */,
+				1AEBE2962509DF5D001840F5 /* 카뱅코딩.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -313,7 +313,7 @@
 			);
 			name = "KakaoBank-iOS";
 			productName = "KakaoBank-iOS";
-			productReference = 1AEBE2962509DF5D001840F5 /* KaBank.app */;
+			productReference = 1AEBE2962509DF5D001840F5 /* 카뱅코딩.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -591,7 +591,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mgalleria.mgalleriaDev;
-				PRODUCT_NAME = KaBank;
+				PRODUCT_NAME = "카뱅코딩";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -613,7 +613,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mgalleria.mgalleriaDev;
-				PRODUCT_NAME = KaBank;
+				PRODUCT_NAME = "카뱅코딩";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
