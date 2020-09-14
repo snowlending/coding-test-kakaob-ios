@@ -13,8 +13,14 @@ class SearchViewController: UITableViewController, UISearchControllerDelegate {
     
     private var searchController: UISearchController!
     private let searchResultsContainerViewController = SearchResultsContainerViewController()
-    private var searchHistory: [String] = SearchHistoryHelper.shared.all()
-    private var searchType: SearchType = .history
+    private var searchHistory: [String] = SearchHistoryService.shared.all() {
+        didSet {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
+    private var searchType: SearchType = .localHistory
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,85 +34,15 @@ class SearchViewController: UITableViewController, UISearchControllerDelegate {
 
         initSearchController()
         
-        initSampleData()
-        
-        test()
-    }
-    
-    func test() {        
-        
-//        let term = "카카오뱅크"
-//        print(ItunesAPI.shared.getURL(with: "search"))
-//        let term = "카카오뱅크"
-//        var urlComponents = URLComponents()
-//        urlComponents.scheme = "https"
-//        urlComponents.host = "itunes.apple.com"
-//        urlComponents.path = "/search"
-//        urlComponents.queryItems = [
-//            URLQueryItem(name: "term", value: term),
-//            URLQueryItem(name: "country", value: "KR"),
-//            URLQueryItem(name: "entity", value: "software"),
-//            URLQueryItem(name: "lang", value: "ko_KR"),
-//            URLQueryItem(name: "explicit", value: "NO"),
-//            URLQueryItem(name: "limit", value: "200"),
-//        ]
-//
-//        let url = urlComponents.url!
-//        var session = URLSession.shared
-//        let configuration = URLSessionConfiguration.default
-//        // See additional explanation
-//        // https://github.com/Alamofire/Alamofire/issues/1266#issuecomment-221471947
-//        configuration.timeoutIntervalForRequest = 7
-//        configuration.timeoutIntervalForResource = 30
-//        session = URLSession(configuration: configuration)
-//
-//        var request = URLRequest(url: url)
-//        request.httpMethod = "GET"
-//        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-//        request.addValue("application/json", forHTTPHeaderField: "Accept")
-//
-//        let task = session.dataTask(with: request as URLRequest, completionHandler: { data, response, error in
-//
-//            if error != nil || data == nil {
-//                print("클라이언트 에러가 있습니다.")
-//                DispatchQueue.main.async {
-//                    Alertift.alert(title: "네트워크 에러", message: "클라이언트 에러가 있습니다.")
-//                        .action(.default("확인"))
-//                        .show(on: self)
-//                }
-//                return
-//            }
-//
-//            guard let resp = response as? HTTPURLResponse, (200...299).contains(resp.statusCode) else {
-//                print("서버 에러가 있습니다.\n코드: \((response as? HTTPURLResponse)?.statusCode ?? 0)")
-//                DispatchQueue.main.async {
-//                    Alertift.alert(title: "네트워크 에러", message: "서버 에러가 있습니다.\n코드: \((response as? HTTPURLResponse)?.statusCode ?? 0)")
-//                        .action(.default("확인"))
-//                        .show()
-//                }
-//                return
-//            }
-//
-//            do {
-//                let json = try JSONSerialization.jsonObject(with: data!, options: [])
-//                print(json)
-//            } catch {
-//                print("JSON error: \(error.localizedDescription)")
-//                DispatchQueue.main.async {
-//                    Alertift.alert(title: "데이터 에러", message: "데이터에 에러가 있습니다.\n메세지: \(error.localizedDescription)")
-//                        .action(.default("확인"))
-//                        .show(on: self)
-//                }
-//            }
-//
-//        })
-//
-//        task.resume()
+        // For dev
+        // initSampleData()
     }
     
     // Initialize search bar UI
     private func initSearchController() {
         searchController = UISearchController(searchResultsController: searchResultsContainerViewController)
+        searchResultsContainerViewController.search = search
+        searchResultsContainerViewController.appAction = appAction
         searchController.searchBar.delegate = self
         searchController.searchResultsUpdater = self
         searchController.searchBar.placeholder = "App Store"
@@ -118,16 +54,17 @@ class SearchViewController: UITableViewController, UISearchControllerDelegate {
     
     // Sample data for development testing
     private func initSampleData() {
+        guard searchHistory.count == 0 else { return }
+        
         let sampleData = ["카카오", "카카오뱅크", "녹음기", "엠넷", "pitu", "의지의 히어로", "구글맵", "진에어", "grab"].reversed()
-        sampleData.forEach {SearchHistoryHelper.shared.add(term: $0)}
-        searchHistory = SearchHistoryHelper.shared.all()
-        tableView.reloadOnMainThread()
+        sampleData.forEach {SearchHistoryService.shared.add(term: $0)}
+        searchHistory = SearchHistoryService.shared.all()
     }
     
     // Search run
     private func search(term: String) {
         searchController.searchBar.text = term
-        searchType = .appstore
+        searchType = .appStore
         searchController.isActive = true
         searchController.searchBar.resignFirstResponder()
         
@@ -135,11 +72,29 @@ class SearchViewController: UITableViewController, UISearchControllerDelegate {
         navigationController?.navigationBar.setValue(false, forKey: "hidesShadow")
         
         // Save search history
-        SearchHistoryHelper.shared.add(term: term)
-        
-        // Recent search term update
-        searchHistory = SearchHistoryHelper.shared.all()
-        tableView.reloadOnMainThread()
+        SearchHistoryService.shared.add(term: term)
+    }
+    
+    // Action for app (download or show detail)
+    private func appAction(type: AppActionType, app: App) {
+        switch type {
+        case .download:
+            Alertift.alert(title: "다운로드", message: "\(app.name)")
+                .action(.default("확인"))
+                .show()
+        case .showDetail:
+            performSegue(withIdentifier: "ShowAppDetailViewSegue", sender: app)
+        }
+    }
+    
+    // Screen change using storyboard
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowAppDetailViewSegue" {
+            let appDetailViewController = segue.destination as! AppDetailViewController
+            appDetailViewController.modalPresentationStyle = .fullScreen
+            appDetailViewController.app = sender as? App
+        }        
+        crossDissolve()
     }
     
     
@@ -150,14 +105,12 @@ class SearchViewController: UITableViewController, UISearchControllerDelegate {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "HistoryTableViewCell")
         cell?.textLabel?.text = searchHistory[indexPath.row]
         return cell!
     }
     
-    
-    // MARK: UITableView Delegate
-    
+    // Selected from search history
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         search(term: searchHistory[indexPath.row])
     }
@@ -167,18 +120,24 @@ class SearchViewController: UITableViewController, UISearchControllerDelegate {
 
 extension SearchViewController: UISearchBarDelegate {
     
+    // Typing search text
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        searchType = searchText.isEmpty ? .appstore : .history
+        searchType = searchText.isEmpty ? .appStore : .localHistory
         navigationController?.navigationBar.setValue(searchText.isEmpty, forKey: "hidesShadow")
     }
     
+    // Search
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let text = searchBar.text else { return }
         search(term: text)
     }
     
+    // Click cancel
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
+        
+        // Recent search term update
+        searchHistory = SearchHistoryService.shared.all()
     }
     
 }
