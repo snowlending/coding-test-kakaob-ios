@@ -182,4 +182,10 @@ public enum ColorCompatibility {
         return UIColor.gray
     }
     
+    public static var systemBlue: UIColor {
+        if #available(iOS 13, *) {
+            return .systemBlue
+        }
+        return UIColor.blue
+    }
 }

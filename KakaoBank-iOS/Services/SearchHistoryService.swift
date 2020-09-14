@@ -8,14 +8,14 @@
 
 import Foundation
 
-class SearchHistoryHelper {
+class SearchHistoryService {
     
     private let KEY = "SavedStringArray"
     private var history: [String]!
     
     // Singleton
-    static let shared: SearchHistoryHelper = {
-        let instance = SearchHistoryHelper()
+    static let shared: SearchHistoryService = {
+        let instance = SearchHistoryService()
         instance.history = instance.all()
         return instance
     }()
@@ -39,7 +39,6 @@ class SearchHistoryHelper {
             data.remove(at: hasTerm)
         }
         data.insert(term, at: 0)
-        print(data)
         defaults.set(data, forKey: KEY)
         history = data
     }

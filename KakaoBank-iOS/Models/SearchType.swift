@@ -9,6 +9,6 @@
 import Foundation
 
 enum SearchType {
-    case history
-    case appstore
+    case localHistory
+    case appStore
 }

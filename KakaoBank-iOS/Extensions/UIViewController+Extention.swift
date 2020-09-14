@@ -28,4 +28,11 @@ extension UIViewController {
         removeFromParent()
     }
     
+    func crossDissolve() {
+        let transition: CATransition = CATransition()
+        transition.duration = 0.2
+        transition.type = CATransitionType.fade
+        navigationController?.view.layer.add(transition, forKey: nil)
+    }
+    
 }
